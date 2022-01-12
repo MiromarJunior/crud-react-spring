@@ -40,6 +40,7 @@ public class ClienteModel {
 	private String telefone;
 	
 	@CPF
+	@Column(name = "cpf", unique = true)
 	private String cpf;
 	
 	
