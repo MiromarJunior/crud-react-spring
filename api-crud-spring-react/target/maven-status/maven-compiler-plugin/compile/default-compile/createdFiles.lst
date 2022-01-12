@@ -1,0 +1,5 @@
+com\api\crud\spring\react\service\ClienteService.class
+com\api\crud\spring\react\repository\ClienteRepository.class
+com\api\crud\spring\react\ApiCrudSpringReactApplication.class
+com\api\crud\spring\react\model\ClienteModel.class
+com\api\crud\spring\react\controller\ClienteController.class
