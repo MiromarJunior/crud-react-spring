@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.api.crud.spring.react.model.ClienteModel;
 
 @Repository
-public interface ClienteRepository extends JpaRepository< ClienteModel, Long>  {
+public interface ClienteRepository extends JpaRepository< ClienteModel, Long >  {
 
 }
