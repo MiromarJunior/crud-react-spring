@@ -1,14 +1,22 @@
 import httpClient from "../api";
 
 const getAll = () => {
-  return httpClient.get("/api/clientes/listar");
+  return httpClient.get("/listar");
   
-
 }
 
 const create = data =>{
-  return httpClient.post("/api/clientes/salvar",data);
+  return httpClient.post("/salvar",data);
 }
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default { getAll,create };
+const getId = id =>{
+  return httpClient.get(`listar/${id}`);
+}
+
+const update = data =>{
+  return httpClient.put('/atualizar',data);
+}
+
+
+
+export default {getAll, create, getId, update};

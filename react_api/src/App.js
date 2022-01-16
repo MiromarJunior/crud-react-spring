@@ -7,11 +7,17 @@ function App() {
   return (
     <BrowserRouter>
       <div>
+        <div>
         <Routes>
           <Route path="/" element={<ClientesList />} />
+          <Route path="/clientes/edit/:id" element={< ClientesAdd/>} />
           <Route path="/add" element={<ClientesAdd />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+
+        </div>
+        
       </div>
     </BrowserRouter>
   );

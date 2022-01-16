@@ -24,8 +24,8 @@ public class ClienteService {
 		return repo.findAll();
 	}
 	
-	public Optional<ClienteModel> getById(Long id){
-		return repo.findById(id);
+	public ClienteModel getById(Long id){
+		return repo.findById(id).get();
 	}
 	
 	public void delete(Long id){

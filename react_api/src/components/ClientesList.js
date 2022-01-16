@@ -22,6 +22,8 @@ const ClientesList = () => {
       <h3>Lista de Clientes</h3>
       <div className="table-responsive">
         <Link to="/add" className="btn btn-primary mb-2" >Cadastrar Cliente</Link>
+      
+        
 
         <table className="table table-hover">
           <thead>
@@ -31,16 +33,20 @@ const ClientesList = () => {
               <th scope="col">CPF</th>
               <th scope="col">Email</th>
               <th scope="col">Telefone</th>
+              <th scope="col">Editar</th>
             </tr>
           </thead>
           <tbody>
-            {clientes.map((cliente) => (
+            {clientes.map(cliente => (
               <tr key={cliente.id}>
-                <th scope="row">{cliente.id}</th>
                 <td>{cliente.nome}</td>
                 <td>{cliente.cpf}</td>
                 <td>{cliente.email}</td>
                 <td>{cliente.telefone}</td>
+                <td>
+                <Link className="btn btn-info" to={`/clientes/edit/${cliente.id}`}>Update</Link>
+
+                </td>
               </tr>
             ))}
           </tbody>
@@ -48,5 +54,5 @@ const ClientesList = () => {
       </div>
     </div>
   );
-};
+}
 export default ClientesList;

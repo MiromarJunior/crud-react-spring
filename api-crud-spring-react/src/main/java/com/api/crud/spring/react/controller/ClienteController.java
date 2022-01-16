@@ -34,9 +34,9 @@ public class ClienteController {
 
 	}
 
-	@PutMapping("/atualizar/{id}")
-	public ResponseEntity<Object> save(@PathVariable long id, @RequestBody ClienteModel cli) {
-		cli.setId(id);
+	@PutMapping("/atualizar")
+	public ResponseEntity<Object> update(@RequestBody ClienteModel cli) {
+		
 		serv.saveOrUpdate(cli);
 		return new ResponseEntity<>("Cliente Atualizado !", HttpStatus.CREATED);
 
@@ -48,12 +48,12 @@ public class ClienteController {
 	}
 
 	@GetMapping("/listar/{id}")
-	public Optional<ClienteModel> getById(@PathVariable long id) {
+	public ClienteModel getById(@PathVariable Long id) {
 		return serv.getById(id);
 
 	}
 
-	@DeleteMapping("/deletar/{id}")
+	@DeleteMapping("/clientes/{id}")
 	public ResponseEntity<Object> delete(@PathVariable long id) {
 		serv.delete(id);
 		return new ResponseEntity<>("Cliente deletado com sucesso", HttpStatus.CREATED);
