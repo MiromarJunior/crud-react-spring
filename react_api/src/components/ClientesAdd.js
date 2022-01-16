@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import clientesServices from "../Services/ClientesServices";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const ClientesAdd = () => {
   const [nome, setNome] = useState("");
@@ -111,18 +112,17 @@ const ClientesAdd = () => {
           />
         </div>
         <div>
-          <button
+          <button type="button"
             onClick={(e) => saveClientes(e)}
-            className="btn btn-outline-primary mx-auto col-mx"
-          >
-            Salvar
-          </button>
-          <a className="btn btn-outline-primary" href="/" role="button">
-            Lista de Clientes
-          </a>
+            className="btn btn-outline-primary mx-auto col-mx "
+          > Salvar   </button>
+          <Link type="button" className="btn btn-outline-primary mx-auto col-mx ml-2" to={"/"} > Lista de Clientes  </Link>
+          
+          
+
+ 
         </div>
-        <div></div>
-      </form>
+        </form>
       <hr />
     </div>
   );

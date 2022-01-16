@@ -17,6 +17,11 @@ const update = data =>{
   return httpClient.put('/atualizar',data);
 }
 
+const remove = id =>{
+  return httpClient.delete(`deletar/${id}`);
+}
 
 
-export default {getAll, create, getId, update};
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {getAll, create, getId, update, remove};

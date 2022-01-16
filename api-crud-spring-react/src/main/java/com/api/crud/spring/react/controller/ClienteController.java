@@ -36,7 +36,6 @@ public class ClienteController {
 
 	@PutMapping("/atualizar")
 	public ResponseEntity<Object> update(@RequestBody ClienteModel cli) {
-		
 		serv.saveOrUpdate(cli);
 		return new ResponseEntity<>("Cliente Atualizado !", HttpStatus.CREATED);
 
@@ -53,8 +52,8 @@ public class ClienteController {
 
 	}
 
-	@DeleteMapping("/clientes/{id}")
-	public ResponseEntity<Object> delete(@PathVariable long id) {
+	@DeleteMapping("/deletar/{id}")
+	public ResponseEntity<Object> delete(@PathVariable Long id) {
 		serv.delete(id);
 		return new ResponseEntity<>("Cliente deletado com sucesso", HttpStatus.CREATED);
 	}
